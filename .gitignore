@@ -19,5 +19,3 @@ wheels/
 # Mac
 .DS_Store
 
-# Local config
-config.toml

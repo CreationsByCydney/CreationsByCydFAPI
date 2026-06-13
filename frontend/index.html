@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store</title>
+    <title>🍓 Creations By Cyd 🍓</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
-        <h1 id="store-title">Loading...</h1>
-        <p id="store-description"></p>
+        <div class="header-content">
+            <h1 id="store-title">🍓 Creations By Cyd 🍓</h1>
+            <p id="store-description">Handcrafted Bracelets Made with Love ✨</p>
+        </div>
     </header>
-    <main>
-        <section class="filters">
-            <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
-            <select id="sort-select" aria-label="Sort products">
-                <option value="name-asc">Name (A-Z)</option>
-                <option value="name-desc">Name (Z-A)</option>
-                <option value="price-asc">Price (Low to High)</option>
-                <option value="price-desc">Price (High to Low)</option>
-            </select>
-            <div id="tags-container"></div>
-        </section>
 
+    <section class="brand-section">
+        <div class="brand-content">
+            <span class="brand-icon">💝</span>
+            <h2>Perfect Gifts</h2>
+            <p>Surprise your friends and family with homemade, personalized bracelets, paintings, and earrings that you won't find anywhere else.</p>
+        </div>
+    </section>
+
+    <main>
         <section class="products" id="products-grid" aria-label="Products">
             <div class="loading-container">
                 <div class="loading-truck-scene">
@@ -58,15 +61,26 @@
         </section>
     </main>
 
+    <section class="custom-order-section">
+        <div class="custom-order-content">
+            <h2>Want something exceptionally special and unique to you? Reach out!</h2>
+            <p>Reach out to me with your ideas and let's create something special together!</p>
+            <a href="mailto:creationsbycyd@gmail.com" class="btn-primary email-btn">Send me an email with your ideas!</a>
+        </div>
+    </section>
+
     <aside class="cart-popover hidden" id="cart-popover" aria-label="Shopping cart" popover>
         <header class="cart-header">
-            <h2>Cart</h2>
-            <button id="cart-close" class="cart-close-btn" aria-label="Close cart" popovertarget="cart-popover" popovertargetaction="hide" >X</button>
+            <h2>Your Cart 🛒</h2>
+            <button id="cart-close" class="cart-close-btn" aria-label="Close cart" popovertarget="cart-popover" popovertargetaction="hide">✕</button>
         </header>
-        <div class="cart-items" id="cart-items"></div>
+        <p class="cart-subtitle">Ready to checkout?</p>
+        <div class="cart-items" id="cart-items">
+            <p class="cart-empty">Your cart is empty! Add some beautiful bracelets to get started ✨</p>
+        </div>
         <footer class="cart-footer">
             <p class="cart-total">Total: <span id="cart-total">$0.00</span></p>
-            <button id="checkout-btn" class="btn-primary" disabled>Checkout</button>
+            <button id="checkout-btn" class="btn-primary" disabled>Checkout with Stripe</button>
         </footer>
     </aside>
 
@@ -77,14 +91,20 @@
 
     <div class="overlay hidden" id="overlay"></div>
 
-    <footer class="site-footer">
-        <div class="contact-info">
-            <p id="contact-email"></p>
-            <p id="contact-phone"></p>
-        </div>
-        <div class="social-links" id="social-links"></div>
-    </footer>
-
+    <div class="sparkles" aria-hidden="true">
+        <span class="sparkle" style="left:5%; top:15%; animation-delay:0s; animation-duration:6s;">✨</span>
+        <span class="sparkle" style="left:15%; top:60%; animation-delay:1.5s; animation-duration:8s;">💖</span>
+        <span class="sparkle" style="left:30%; top:80%; animation-delay:0.8s; animation-duration:7s;">⭐</span>
+        <span class="sparkle" style="left:50%; top:10%; animation-delay:2.5s; animation-duration:9s;">😊</span>
+        <span class="sparkle" style="left:65%; top:70%; animation-delay:1s; animation-duration:6.5s;">🌟</span>
+        <span class="sparkle" style="right:10%; top:25%; animation-delay:3s; animation-duration:7.5s;">💕</span>
+        <span class="sparkle" style="right:25%; top:55%; animation-delay:0.3s; animation-duration:8.5s;">🦋</span>
+        <span class="sparkle" style="right:5%; top:85%; animation-delay:2s; animation-duration:6s;">🌈</span>
+        <span class="sparkle" style="left:75%; top:40%; animation-delay:1.8s; animation-duration:7s;">💗</span>
+        <span class="sparkle" style="left:40%; top:45%; animation-delay:3.5s; animation-duration:8s;">✨</span>
+        <span class="sparkle" style="right:40%; top:15%; animation-delay:0.5s; animation-duration:9s;">🌸</span>
+        <span class="sparkle" style="left:85%; top:30%; animation-delay:2.2s; animation-duration:6.5s;">✨</span>
+    </div>
     <script src="/static/app.js"></script>
 </body>
 </html>
