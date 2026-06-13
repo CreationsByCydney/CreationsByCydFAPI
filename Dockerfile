@@ -2,7 +2,7 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY pyproject.toml .
+COPY pyproject.toml README.md .
 RUN pip install --no-cache-dir .
 
 COPY frontend/ frontend/
