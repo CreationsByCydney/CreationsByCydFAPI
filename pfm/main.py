@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from functools import lru_cache
 from fastapi import FastAPI, HTTPException, Request
@@ -12,7 +13,7 @@ config = Config()
 app = FastAPI(title="PyFastMart")
 
 BASE_DIR = Path(__file__).parent.parent
-STATIC_DIR = BASE_DIR / "frontend"
+STATIC_DIR = Path(os.getenv("STATIC_DIR", str(BASE_DIR / "frontend")))
 
 if STATIC_DIR.exists():
     app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")

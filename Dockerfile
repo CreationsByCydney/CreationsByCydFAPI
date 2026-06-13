@@ -9,6 +9,8 @@ RUN pip install --no-cache-dir .
 COPY frontend/ frontend/
 COPY config.toml .
 
+ENV STATIC_DIR=/app/frontend
+
 EXPOSE 8000
 
 CMD ["pfm", "serve"]
